@@ -61,59 +61,73 @@ The global **Data Lakehouse & Open Table Format market** is estimated at **$17.1
 
 ## Open-Source GitHub Projects
 
+Explore the top open-source projects across the Apache Iceberg, open table format, and lakehouse ecosystem. Sorted in descending order by GitHub star count:
 
+- **[Apache Spark](https://github.com/apache/spark)** [![Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers)  
+  Unified engine for large-scale distributed data processing; the primary compute engine for Apache Iceberg batch and streaming pipelines via the iceberg-spark-runtime connector.
 
-### The Open Table Format (Apache Iceberg)
+- **[DuckDB](https://github.com/duckdb/duckdb)** [![Stars](https://img.shields.io/github/stars/duckdb/duckdb?style=social&color=white)](https://github.com/duckdb/duckdb/stargazers)  
+  High-performance embeddable analytical SQL database engine; provides ultra-fast client-side querying directly over Apache Iceberg metadata and Parquet data files.
 
+- **[Apache Flink](https://github.com/apache/flink)** [![Stars](https://img.shields.io/github/stars/apache/flink?style=social&color=white)](https://github.com/apache/flink/stargazers)  
+  Open-source stream processing framework with stateful computations; powers real-time streaming ingestion, CDC capture, and streaming writes into Apache Iceberg tables.
 
+- **[Trino](https://github.com/trinodb/trino)** [![Stars](https://img.shields.io/github/stars/trinodb/trino?style=social&color=white)](https://github.com/trinodb/trino/stargazers)  
+  Fast distributed SQL query engine for interactive ad-hoc analytics; features deep native Apache Iceberg connector support with REST catalog integration and query pushdown.
 
-- **[Apache Iceberg](https://github.com/apache/iceberg)**  
+- **[StarRocks](https://github.com/StarRocks/starrocks)** [![Stars](https://img.shields.io/github/stars/StarRocks/starrocks?style=social&color=white)](https://github.com/StarRocks/starrocks/stargazers)  
+  Next-generation sub-second MPP OLAP database engine engineered for high-concurrency real-time analytics directly over Apache Iceberg and open lakehouse tables.
 
-  The **open standard for huge analytic tables** (Apache 2.0) . Brings SQL-table reliability to data lakes with schema evolution, hidden partitioning, time travel, and ACID transactions. **Multi-engine support**: connectors for Spark, Flink, and Hive are maintained in the main repository; Trino, Presto, Impala, and others have separate integrations . **Iceberg 1.11.0** (May 2026) added Spark 4.1 and Flink 2.1 as default build targets, server-side scan planning for REST catalogs, built-in table encryption with envelope encryption and Google KMS support, and a **File Format API** that makes file formats pluggable (enabling future integration of Vortex, Lance, and other formats) . **Language implementations**: Rust (iceberg-rust 0.9.0), Go (iceberg-go 0.5.0), Python (PyIceberg 0.11.0), and C++ (0.2.0) are actively developed . **Best for organizations wanting a vendor-neutral table format** with the broadest engine ecosystem—but it is a format specification and library, not a managed service.
+- **[Apache Iceberg](https://github.com/apache/iceberg)** [![Stars](https://img.shields.io/github/stars/apache/iceberg?style=social&color=white)](https://github.com/apache/iceberg/stargazers)  
+  The industry-standard open table format for huge analytic tables; brings SQL-table reliability to data lakes with ACID transactions, schema evolution, hidden partitioning, and time travel.
 
+- **[Delta Lake](https://github.com/delta-io/delta)** [![Stars](https://img.shields.io/github/stars/delta-io/delta?style=social&color=white)](https://github.com/delta-io/delta/stargazers)  
+  Open-source storage framework enabling building lakehouse architectures with compute engines including Spark, PrestoDB, Flink, and Trino, featuring UniForm cross-format reading for Iceberg.
 
+- **[Lance](https://github.com/lance-format/lance)** [![Stars](https://img.shields.io/github/stars/lance-format/lance?style=social&color=white)](https://github.com/lance-format/lance/stargazers)  
+  Modern columnar data format optimized for multimodal AI, vector search, and random-access analytics; integrates with Iceberg catalogs and tabular engines.
 
-### REST Catalogs (Vendor-Neutral)
+- **[Apache Hudi](https://github.com/apache/hudi)** [![Stars](https://img.shields.io/github/stars/apache/hudi?style=social&color=white)](https://github.com/apache/hudi/stargazers)  
+  Transactional data lakehouse platform bringing stream processing primitives to batch table storage with record-level updates, deletes, and change streams.
 
+- **[lakeFS](https://github.com/treeverse/lakeFS)** [![Stars](https://img.shields.io/github/stars/treeverse/lakeFS?style=social&color=white)](https://github.com/treeverse/lakeFS/stargazers)  
+  Scalable Git-like data version control system over object storage; enables branching, committing, rolling back, and merging production data lakes across Iceberg and Delta formats.
 
+- **[Apache Paimon](https://github.com/apache/paimon)** [![Stars](https://img.shields.io/github/stars/apache/paimon?style=social&color=white)](https://github.com/apache/paimon/stargazers)  
+  Streaming data lake platform enabling real-time lakehouse architectures with high-throughput streaming updates and sub-second point queries.
 
-- **[Apache Polaris](https://github.com/apache/polaris)**  
+- **[Apache Gravitino](https://github.com/apache/gravitino)** [![Stars](https://img.shields.io/github/stars/apache/gravitino?style=social&color=white)](https://github.com/apache/gravitino/stargazers)  
+  High-performance, geo-distributed, federated metadata lake with native Iceberg REST catalog services, access control, auditing, and multi-cloud catalog federation.
 
-  The **vendor-neutral implementation of the Iceberg REST Catalog spec** (Apache 2.0) . Graduated as an Apache TLP in February 2026 with contributions from Dremio and Snowflake—two competing companies collaborating under Apache governance. Provides a standard REST API for Iceberg catalog operations, enabling any compatible engine to access tables without proprietary catalog lock-in. **Best for organizations wanting a neutral, open catalog** that avoids vendor-specific metadata services—but it is a catalog only, not a full lakehouse platform.
+- **[Apache Polaris](https://github.com/apache/polaris)** [![Stars](https://img.shields.io/github/stars/apache/polaris?style=social&color=white)](https://github.com/apache/polaris/stargazers)  
+  Vendor-neutral open-source implementation of the Apache Iceberg REST Catalog spec; graduated Apache TLP enabling multi-engine interoperability without catalog lock-in.
 
+- **[pg_lake](https://github.com/Snowflake-Labs/pg_lake)** [![Stars](https://img.shields.io/github/stars/Snowflake-Labs/pg_lake?style=social&color=white)](https://github.com/Snowflake-Labs/pg_lake/stargazers)  
+  PostgreSQL extension for native Apache Iceberg table querying and data lake access directly within Postgres databases.
 
+- **[OLake](https://github.com/datazip-inc/olake)** [![Stars](https://img.shields.io/github/stars/datazip-inc/olake?style=social&color=white)](https://github.com/datazip-inc/olake/stargazers)  
+  Ultra-fast replication engine streaming CDC from PostgreSQL, MySQL, MongoDB, Kafka, and S3 directly into optimized Apache Iceberg tables.
 
-- **[Apache Gravitino](https://github.com/apache/gravitino)**  
+- **[Project Nessie](https://github.com/projectnessie/nessie)** [![Stars](https://img.shields.io/github/stars/projectnessie/nessie?style=social&color=white)](https://github.com/projectnessie/nessie/stargazers)  
+  Transactional Iceberg catalog bringing Git-like branch-and-merge version control semantics to data lakehouses.
 
-  High-performance, **geo-distributed, federated metadata lake** (Apache 2.0) . Manages metadata across Hive, MySQL, MariaDB, HDFS, S3, and other sources through a unified model and API. Features: **native Iceberg REST catalog service**, Lance REST catalog service, Trino connector for federated access, access control, auditing, and discovery across metadata assets. Supports multi-region metadata synchronization for hybrid/multi-cloud setups. **Best for organizations with heterogeneous data sources** wanting unified metadata access across lakes and warehouses—but it is a metadata layer, not a compute engine.
+- **[Lakekeeper](https://github.com/lakekeeper/lakekeeper)** [![Stars](https://img.shields.io/github/stars/lakekeeper/lakekeeper?style=social&color=white)](https://github.com/lakekeeper/lakekeeper/stargazers)  
+  High-performance Apache Iceberg REST Catalog written in Rust, featuring fine-grained access control, credential vending, and comprehensive audit logs.
 
+- **[Iceberg Rust](https://github.com/apache/iceberg-rust)** [![Stars](https://img.shields.io/github/stars/apache/iceberg-rust?style=social&color=white)](https://github.com/apache/iceberg-rust/stargazers)  
+  Official Apache Iceberg implementation in native Rust for high-throughput, low-latency lakehouse systems and custom analytical runtimes.
 
+- **[Apache Amoro](https://github.com/apache/amoro)** [![Stars](https://img.shields.io/github/stars/apache/amoro?style=social&color=white)](https://github.com/apache/amoro/stargazers)  
+  Lakehouse management system built on Apache Iceberg and mixed streaming/batch table formats, automating background table maintenance, compaction, and optimizations.
 
-### Iceberg-Native Transformation (Data Branching)
+- **[PyIceberg](https://github.com/apache/iceberg-python)** [![Stars](https://img.shields.io/github/stars/apache/iceberg-python?style=social&color=white)](https://github.com/apache/iceberg-python/stargazers)  
+  Official Python implementation of Apache Iceberg; provides native Pythonic reading, schema inspection, and metadata interactions without requiring a JVM.
 
+- **[Iceberg Go](https://github.com/apache/iceberg-go)** [![Stars](https://img.shields.io/github/stars/apache/iceberg-go?style=social&color=white)](https://github.com/apache/iceberg-go/stargazers)  
+  Official Apache Iceberg library written in Go for cloud-native microservices, telemetry ingestion, and REST catalog tools.
 
-
-- **[Reble](https://pypi.org/project/reble/0.6.1/)**  
-
-  Open-source **transformation engine with Iceberg-native data branching** (pip-installable) . Works with any Iceberg catalog (Glue, Polaris, Nessie, Hive, any REST-compliant catalog)—**no new infrastructure required**. Models are plain SQL files; lineage is parsed with SQLGlot. **Branch creation is metadata-only** (< 10 ms for a 5M-row table); upstream inputs are pinned via Iceberg tags; row-level diffs are computed via DuckDB streaming. **Promote semantics**: fast-forward only when pinned bases still equal main; otherwise scoped re-run with fresh diff. **No three-way merge**—a change is either fast-forwarded or re-run. Measured lifecycle on AWS (Glue + S3, 1M rows): scoped run ~13s, diff ~4s, drift check ~2s . **Best for data teams wanting Git-like branching for Iceberg tables** without a new catalog or server—but it is a CLI/engine, not a full orchestration platform.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Apache Spark + Iceberg Runtime** — The most common compute engine for Iceberg workloads; use the `iceberg-spark-runtime` jar for the appropriate Spark version (e.g., Spark 3.5 or 4.0) . **Best for batch and streaming workloads** over Iceberg tables—but Spark is a general-purpose engine, not a lakehouse platform.
-
-- **Trino + Iceberg Connector** — High-performance SQL query engine with native Iceberg connector; enables federated queries across Iceberg and other sources. **Best for interactive analytics** over Iceberg lakes—but requires operating Trino clusters.
-
-- **Nessie** — Open-source transactional catalog for Iceberg with Git-like branching and versioning; an alternative to Polaris for teams wanting data versioning capabilities. **Verify current project status** and compatibility with Iceberg 1.11.
-
-
-
-**Frameworks for building custom systems**: For the **open table format itself**, Apache Iceberg provides the foundation with the broadest engine ecosystem and active multi-language development . For a **vendor-neutral REST catalog**, Apache Polaris is the standard open-source implementation . For **federated metadata across heterogeneous sources**, Apache Gravitino . For **data branching without new infrastructure**, Reble . **Managed platforms differentiate on operational simplicity**—AWS Glue, Google BigLake, and Snowflake's integration handle catalog management and scaling, while open-source requires you to operate Polaris/Gravitino and compute engines yourself.
-
-
+- **[DuckDB Iceberg Extension](https://github.com/duckdb/duckdb-iceberg)** [![Stars](https://img.shields.io/github/stars/duckdb/duckdb-iceberg?style=social&color=white)](https://github.com/duckdb/duckdb-iceberg/stargazers)  
+  Official DuckDB extension enabling direct SQL queries against Apache Iceberg tables with snapshot navigation and schema evolution support.
 
 ## How to Contribute
 
