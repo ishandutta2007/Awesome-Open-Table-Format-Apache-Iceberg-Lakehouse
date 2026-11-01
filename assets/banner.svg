@@ -26,6 +26,7 @@
       <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
     </linearGradient>
 
+    <!-- Subtle Filters -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="4" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
@@ -123,7 +124,7 @@
 
   <!-- Subtitle -->
   <text x="600" y="172" text-anchor="middle" fill="url(#subGrad)" class="subtitle">
-    Curated SaaS Solutions &bull; REST Catalogs &bull; Open-Source Lakehouse Compute Engines
+    Curated SaaS Solutions &#x2022; REST Catalogs &#x2022; Open-Source Lakehouse Compute Engines
   </text>
 
   <!-- Architecture Flow Pills (Foreground Bottom Layer) -->
@@ -131,34 +132,34 @@
     <!-- Storage & Format Pill -->
     <g transform="translate(0, 0)">
       <rect width="200" height="44" rx="10" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7" />
-      <text x="100" y="27" text-anchor="middle" fill="#e2e8f0" class="badge-text">Iceberg &bull; Lance &bull; Delta</text>
+      <text x="100" y="27" text-anchor="middle" fill="#e2e8f0" class="badge-text">Iceberg &#x2022; Lance &#x2022; Delta</text>
     </g>
 
     <!-- Arrow 1 -->
-    <text x="225" y="28" fill="#38bdf8" font-size="18" font-family="monospace">&rarr;</text>
+    <text x="225" y="28" fill="#38bdf8" font-size="18" font-family="monospace">&#x2192;</text>
 
     <!-- REST Catalog Pill -->
     <g transform="translate(250, 0)">
       <rect width="205" height="44" rx="10" fill="url(#cardBg)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.7" />
-      <text x="102" y="27" text-anchor="middle" fill="#e2e8f0" class="badge-text">Polaris &bull; Glue &bull; Nessie</text>
+      <text x="102" y="27" text-anchor="middle" fill="#e2e8f0" class="badge-text">Polaris &#x2022; Glue &#x2022; Nessie</text>
     </g>
 
     <!-- Arrow 2 -->
-    <text x="480" y="28" fill="#818cf8" font-size="18" font-family="monospace">&rarr;</text>
+    <text x="480" y="28" fill="#818cf8" font-size="18" font-family="monospace">&#x2192;</text>
 
     <!-- Multi-Engine Query Pill -->
     <g transform="translate(505, 0)">
       <rect width="205" height="44" rx="10" fill="url(#cardBg)" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.7" />
-      <text x="102" y="27" text-anchor="middle" fill="#e2e8f0" class="badge-text">Spark &bull; Trino &bull; Flink</text>
+      <text x="102" y="27" text-anchor="middle" fill="#e2e8f0" class="badge-text">Spark &#x2022; Trino &#x2022; Flink</text>
     </g>
 
     <!-- Arrow 3 -->
-    <text x="735" y="28" fill="#34d399" font-size="18" font-family="monospace">&rarr;</text>
+    <text x="735" y="28" fill="#34d399" font-size="18" font-family="monospace">&#x2192;</text>
 
     <!-- Enterprise & BI Pill -->
     <g transform="translate(760, 0)">
       <rect width="180" height="44" rx="10" fill="url(#cardBg)" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.7" />
-      <text x="90" y="27" text-anchor="middle" fill="#e2e8f0" class="badge-text">Snowflake &bull; BigQuery</text>
+      <text x="90" y="27" text-anchor="middle" fill="#e2e8f0" class="badge-text">Snowflake &#x2022; BigQuery</text>
     </g>
   </g>
 </svg>
