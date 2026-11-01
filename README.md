@@ -52,7 +52,7 @@ The global **Data Lakehouse & Open Table Format market** is estimated at **$17.1
 
 ## 💻 Open-Source GitHub Projects
 
-Explore the top open-source projects across the Apache Iceberg, open table format, and lakehouse ecosystem. Sorted in descending order by GitHub Stars_Count: ⭐
+Explore the top open-source projects across the Apache Iceberg, open table format, and lakehouse ecosystem. Sorted in descending order by GitHub_Stars_Count: ⭐
 
 - **[Apache Spark](https://github.com/apache/spark)** [![Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers)  
   ⚡ Unified engine for large-scale distributed data processing; the primary compute engine for Apache Iceberg batch and streaming pipelines via the `iceberg-spark-runtime` connector.
