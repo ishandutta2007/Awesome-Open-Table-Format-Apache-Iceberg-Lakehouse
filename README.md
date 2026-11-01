@@ -1,44 +1,21 @@
-# Awesome-Open-Table-Format-Apache-Iceberg-Lakehouse
+# Awesome Open Table Format & Apache Iceberg Lakehouse [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Tracked Topics](https://img.shields.io/badge/Topics-Iceberg%20%7C%20Lakehouse%20%7C%20REST%20Catalog-blue.svg)](https://github.com/ishandutta2007/Awesome-Open-Table-Format-Apache-Iceberg-Lakehouse)
 
-## Top Open Table Format & Apache Iceberg Lakehouse Ecosystem
+> A curated list of awesome **Open Table Formats**, **Apache Iceberg Lakehouse infrastructure**, **REST catalogs**, and analytical compute engines for building vendor-neutral, cloud-native data architectures.
 
+Discover industry-leading **enterprise SaaS platforms** and high-velocity **open-source GitHub projects** powering modern lakehouse storage layers, zero-copy data sharing, Git-for-data versioning, and real-time streaming ingestion.
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Open Table Standards, REST Catalogs & Self-Hosted Lakehouse Infrastructure*  
-
-**Last updated: November 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Open Table Formats & Apache Iceberg Lakehouses**. These tools enable organizations to build vendor-neutral data lakes where multiple compute engines—Spark, Trino, Flink, Snowflake, BigQuery—can safely read and write the same tables concurrently, breaking the lock-in of proprietary warehouse formats.
-
-
-
-**Examples** include Snowflake Apache Iceberg Integration, Tabular (Databricks), Dremio Arctic, Starburst Galaxy, AWS Glue Iceberg, Onehouse, Google BigLake Iceberg, CelerData, Cloudera Iceberg, and Upsolver (the category leaders).
-
-
-
-**Open-source emphasis**: Open Table Format is a domain where open-source tooling is **foundational and rapidly maturing**. **Apache Iceberg** is the open standard itself—a table format that brings SQL-table reliability to big data, with multi-engine support for Spark, Flink, Hive, Trino, Presto, and Impala . The **Iceberg 1.11.0 release** (May 2026) added Spark 4.1 and Flink 2.1 support, server-side scan planning for REST catalogs, built-in table encryption with Google KMS, and a pluggable File Format API that opens the door to new formats like Vortex . For catalogs, **Apache Polaris** is the vendor-neutral open-source implementation of the Iceberg REST Catalog spec—graduated as an Apache TLP in February 2026 with contributions from Dremio and Snowflake . **Apache Gravitino** provides a federated metadata lake with native Iceberg REST catalog services, geo-distribution, and multi-engine compatibility . The critical caveat: **managed platforms differentiate on operational simplicity and integrated governance**—AWS Glue, Google BigLake, and Snowflake's Iceberg integration handle catalog management, security, and scaling, while open-source requires you to operate Polaris/Gravitino and the compute engines yourself.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
+---
 
 ## Table of Contents
 
-- [SaaS/Hosted Platforms](#saas-products)
-
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted Lakehouse Platforms](#saas--hosted-lakehouse-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
+- [Key Architectural Capabilities](#key-architectural-capabilities)
 - [How to Contribute](#how-to-contribute)
+- [Disclaimer & License](#disclaimer)
 
-- [Disclaimer](#disclaimer)
-
-
+---
 
 ## Sector Overview & Market Dynamics
 
@@ -128,6 +105,25 @@ Explore the top open-source projects across the Apache Iceberg, open table forma
 
 - **[DuckDB Iceberg Extension](https://github.com/duckdb/duckdb-iceberg)** [![Stars](https://img.shields.io/github/stars/duckdb/duckdb-iceberg?style=social&color=white)](https://github.com/duckdb/duckdb-iceberg/stargazers)  
   Official DuckDB extension enabling direct SQL queries against Apache Iceberg tables with snapshot navigation and schema evolution support.
+
+
+
+## Key Architectural Capabilities
+
+When designing an open lakehouse architecture based on Apache Iceberg and open table formats, consider the following primary architectural layers:
+
+1. **Table Format & Data Storage Layer**:
+   - **ACID Transactions**: Serializable isolation and snapshot isolation for concurrent readers and writers without read locking.
+   - **Schema & Partition Evolution**: In-place column addition/renaming and hidden partitioning without costly table rewrites.
+   - **Time Travel & Rollback**: Reproducible queries against historical snapshots, enabling zero-copy debugging and audit trails.
+
+2. **Catalog & Metadata Federation**:
+   - **Iceberg REST Catalog Specification**: Standardized HTTP REST specification implemented by open-source systems (Apache Polaris, Lakekeeper, Gravitino) and managed cloud services (Snowflake Horizon, AWS Glue, Google BigLake).
+   - **Cross-Engine Interoperability**: Decoupling the storage format and catalog allows Apache Spark, Trino, Apache Flink, DuckDB, and StarRocks to access identical datasets simultaneously.
+
+3. **Data Management & Optimization**:
+   - **Automated Compaction & Clustering**: Asynchronous compaction of small Parquet/ORC data files to maintain low query latency and optimal file sizes.
+   - **Snapshot Expiration & Orphan File Cleanup**: Maintaining healthy metadata footers and controlling object storage costs.
 
 ## How to Contribute
 
